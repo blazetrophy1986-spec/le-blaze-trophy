@@ -1,0 +1,6 @@
+{
+  "name": "L.E Blaze Trophy — Wesley vs Kingswood",
+  "description": "Experience L.E Blaze Trophy, celebrating rugby, tradition and school spirit between Wesley College Colombo and Kingswood College Kandy.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
