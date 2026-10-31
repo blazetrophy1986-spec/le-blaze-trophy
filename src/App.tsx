@@ -19,10 +19,56 @@ const ScrollToTop: React.FC = () => {
   return null;
 };
 
+// Remove any Netlify promotional badge, drawer, popup or widget if injected by hosting
+const NetlifyBadgeRemover: React.FC = () => {
+  useEffect(() => {
+    const purgeNetlifyElements = () => {
+      const selectors = [
+        '#netlify-drawer',
+        '.netlify-drawer',
+        '[data-netlify-drawer]',
+        'iframe[id*="netlify"]',
+        'iframe[src*="netlify"]',
+        '.netlify-badge',
+        '[id*="netlify-badge"]',
+        '[class*="netlify-badge"]',
+        '[id*="netlify-feedback"]',
+        '[class*="netlify-feedback"]',
+        'img[src*="netlify.com/img/global/badges"]',
+        '#netlify-identity-widget',
+        '.netlify-identity-menu',
+      ];
+
+      selectors.forEach((sel) => {
+        document.querySelectorAll(sel).forEach((el) => {
+          if (el.tagName.toLowerCase() === 'img' && el.closest('a')) {
+            el.closest('a')?.remove();
+          } else {
+            el.remove();
+          }
+        });
+      });
+    };
+
+    purgeNetlifyElements();
+
+    const observer = new MutationObserver(() => {
+      purgeNetlifyElements();
+    });
+
+    observer.observe(document.body, { childList: true, subtree: true });
+
+    return () => observer.disconnect();
+  }, []);
+
+  return null;
+};
+
 export default function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
+      <NetlifyBadgeRemover />
       <div className="min-h-screen flex flex-col bg-[#050B14] text-slate-100">
         <Navbar />
         <main className="flex-1">

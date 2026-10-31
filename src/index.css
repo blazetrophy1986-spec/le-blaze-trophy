@@ -56,3 +56,34 @@
 .maroon-glow {
   box-shadow: 0 0 25px -5px rgba(128, 0, 0, 0.35);
 }
+
+/* -------------------------------------------------------------
+   Suppression of Netlify promotional badges, drawers & widgets
+   ------------------------------------------------------------- */
+#netlify-drawer,
+.netlify-drawer,
+[data-netlify-drawer],
+[id*="netlify-drawer"],
+[class*="netlify-drawer"],
+[id*="netlify-feedback"],
+[class*="netlify-feedback"],
+iframe[id*="netlify"],
+iframe[src*="netlify.com"],
+iframe[src*="netlify-drawer"],
+.netlify-badge,
+[id*="netlify-badge"],
+[class*="netlify-badge"],
+a[href*="netlify.com"][class*="badge"],
+img[src*="netlify.com/img/global/badges"],
+div[data-netlify-deploy-id],
+#netlify-identity-widget,
+.netlify-identity-menu {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  clip-path: inset(100%) !important;
+  z-index: -9999 !important;
+  max-width: 0 !important;
+  max-height: 0 !important;
+}
