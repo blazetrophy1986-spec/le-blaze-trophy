@@ -13,14 +13,13 @@ import {
   Award,
   ChevronRight,
 } from 'lucide-react';
-import { SchoolBadge } from '../components/SchoolBadge';
 import { BRAND_CONFIG, SCHOOL_DATA, GALLERY_ITEMS } from '../data/eventData';
 
 export const HomePage: React.FC = () => {
   return (
     <div className="min-h-screen bg-[#050B14] text-slate-100">
       {/* =========================================================================
-          HERO SECTION: Cinematic international rugby event styling
+          HERO SECTION: Official L.E. Blaze Trophy Poster Showcase
           ========================================================================= */}
       <section className="relative min-h-[92vh] flex items-center justify-center overflow-hidden border-b border-slate-800">
         {/* Ambient Dark Navy & Stadium Lighting Backdrops */}
@@ -36,70 +35,36 @@ export const HomePage: React.FC = () => {
           className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:24px_24px]"
         />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20 flex flex-col items-center text-center">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16 flex flex-col items-center text-center">
           {/* Brand Kicker / Header */}
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900/90 border border-[#D4AF37]/40 shadow-lg shadow-black/60 mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900/90 border border-[#D4AF37]/40 shadow-lg shadow-black/60 mb-5">
             <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse" />
             <span className="text-xs font-bold uppercase tracking-widest text-[#D4AF37]">
-              The Annual Schoolboy Rugby Showcase
+              The Annual Schoolboy Rugby Showcase · Since 1986
             </span>
           </div>
 
-          {/* Dual School Logos Showcase: Kingswood on LEFT, Wesley on RIGHT */}
-          <div className="w-full max-w-4xl grid grid-cols-3 items-center justify-items-center gap-2 sm:gap-6 my-4">
-            {/* LEFT SIDE: Kingswood College Kandy */}
-            <div className="flex flex-col items-center">
-              <SchoolBadge school="kingswood" size="hero" showLabel={true} />
-            </div>
-
-            {/* CENTER: VS Emblem & Trophy Motif */}
-            <div className="flex flex-col items-center justify-center">
-              <div className="relative">
-                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-gradient-to-tr from-[#800000] via-[#0B3D91] to-[#D4AF37] p-0.5 shadow-2xl">
-                  <div className="w-full h-full rounded-full bg-[#050B14] flex items-center justify-center">
-                    <span className="font-heading font-black text-2xl sm:text-3xl text-[#D4AF37] tracking-wider">
-                      VS
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <div className="mt-3 text-[11px] sm:text-xs font-bold tracking-widest uppercase text-slate-400">
-                Historic Rivalry
-              </div>
-            </div>
-
-            {/* RIGHT SIDE: Wesley College Colombo */}
-            <div className="flex flex-col items-center">
-              <SchoolBadge school="wesley" size="hero" showLabel={true} />
+          {/* Official L.E. Blaze Trophy Poster - Clean, premium presentation with dark background */}
+          <div className="w-full max-w-3xl lg:max-w-4xl mx-auto my-2 sm:my-4">
+            <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden bg-[#050B14] border border-[#D4AF37]/35 shadow-2xl shadow-black/90 gold-glow">
+              <img
+                src="/assets/aistudio/WhatsApp_Image_2026-11-01_at_03.32.26_ffbebc9a.jpeg"
+                alt="The Official L.E. Blaze Trophy Poster - Wesley College vs Kingswood College - Since 1986"
+                className="w-full h-auto object-contain block mx-auto select-none"
+                style={{ width: '100%', height: 'auto' }}
+                loading="eager"
+                referrerPolicy="no-referrer"
+              />
             </div>
           </div>
 
-          {/* Main Headings */}
-          <div className="mt-6 space-y-2">
-            <div className="font-heading font-black text-2xl sm:text-3xl md:text-4xl tracking-widest text-[#0066FF] uppercase">
-              L.E
-            </div>
-            <h1 className="font-heading font-black text-5xl sm:text-7xl md:text-8xl lg:text-9xl tracking-tight uppercase leading-none">
-              <span className="text-[#EF4444] drop-shadow-[0_4px_30px_rgba(128,0,0,0.8)]">
-                BLAZE{' '}
-              </span>
-              <span className="text-[#D4AF37] drop-shadow-[0_4px_30px_rgba(212,175,55,0.7)]">
-                TROPHY
-              </span>
-            </h1>
-
-            {/* Match Title */}
-            <div className="pt-2">
-              <p className="font-heading text-xl sm:text-2xl md:text-3xl font-bold uppercase tracking-wide text-white">
-                Wesley College Colombo{' '}
-                <span className="text-[#D4AF37]">vs</span>{' '}
-                Kingswood College Kandy
-              </p>
-            </div>
-
-            {/* Official Subtitle */}
-            <p className="max-w-2xl mx-auto text-sm sm:text-base md:text-lg text-slate-300 font-medium tracking-wide pt-2">
+          {/* Subtitle & Tagline */}
+          <div className="mt-4 sm:mt-6 space-y-2 max-w-2xl mx-auto">
+            <p className="text-base sm:text-xl font-medium tracking-wide text-slate-200">
               {BRAND_CONFIG.tagline}
+            </p>
+            <p className="text-xs sm:text-sm text-slate-400">
+              Wesley College Colombo vs Kingswood College Kandy · Annual Schools Rugby Classic
             </p>
           </div>
 

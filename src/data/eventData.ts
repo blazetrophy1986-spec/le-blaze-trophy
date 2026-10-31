@@ -109,6 +109,16 @@ export const SCHOOL_DATA: { kingswood: SchoolInfo; wesley: SchoolInfo } = {
 
 export const GALLERY_ITEMS: GalleryItem[] = [
   {
+    id: 'official-poster-01',
+    title: 'Official L.E. Blaze Trophy Event Poster',
+    category: 'Stadium & Atmosphere',
+    imageUrl: '/assets/aistudio/WhatsApp_Image_2026-11-01_at_03.32.26_ffbebc9a.jpeg',
+    caption: 'Official L.E. Blaze Trophy poster commemorating the encounter between Wesley College Colombo and Kingswood College Kandy. Tradition. Rivalry. Respect. Since 1986.',
+    aspectRatio: 'square',
+    featured: true,
+    tag: 'Official Event Poster',
+  },
+  {
     id: 'art-01',
     title: 'Official L.E Blaze Trophy Handcrafted Blueprint',
     category: 'Stadium & Atmosphere',
