@@ -12,8 +12,10 @@ import {
   Users,
   Award,
   ChevronRight,
+  Trophy,
+  Flame,
 } from 'lucide-react';
-import { BRAND_CONFIG, SCHOOL_DATA, GALLERY_ITEMS } from '../data/eventData';
+import { BRAND_CONFIG, SCHOOL_DATA, GALLERY_ITEMS, HISTORICAL_RECORD } from '../data/eventData';
 
 export const HomePage: React.FC = () => {
   return (
@@ -260,6 +262,141 @@ export const HomePage: React.FC = () => {
                   <span>Read School Story</span>
                   <ChevronRight className="w-3.5 h-3.5" />
                 </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* =========================================================================
+          SECTION 1.5: OFFICIAL WIN TALLY & 1986 INAUGURAL HERITAGE
+          ========================================================================= */}
+      <section className="py-20 bg-gradient-to-b from-[#070F1C] via-[#091426] to-[#050B14] border-b border-slate-800 relative overflow-hidden">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-[#D4AF37]/5 rounded-full blur-[160px] pointer-events-none" />
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          {/* Header */}
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900 border border-[#D4AF37]/40 text-xs font-mono font-bold uppercase tracking-widest text-[#D4AF37] mb-3">
+              <Trophy className="w-3.5 h-3.5 text-[#D4AF37]" />
+              <span>Official Rivalry Record</span>
+            </div>
+            <h2 className="font-heading font-black text-4xl sm:text-5xl uppercase tracking-tight text-white">
+              Series Win Tally & 1986 Heritage
+            </h2>
+            <p className="text-slate-300 text-sm sm:text-base mt-2">
+              Inaugurated in 1986 under inaugural captains Sumedha Kuruppu (Wesley) and Ronnie Ibrahim (Kingswood), contested for the trophy donated by Roy De Silva.
+            </p>
+          </div>
+
+          {/* Win Tally Scoreboard */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            {/* Kingswood Card */}
+            <div className="p-6 sm:p-8 rounded-2xl bg-gradient-to-b from-[#800000]/25 to-[#091220] border-2 border-[#800000]/60 text-center relative overflow-hidden shadow-xl">
+              <div className="text-xs font-mono font-bold uppercase tracking-wider text-red-300">
+                Kingswood College
+              </div>
+              <div className="font-heading font-black text-5xl sm:text-7xl text-white my-2 tabular-nums">
+                {HISTORICAL_RECORD.winTally.kingswood}
+              </div>
+              <div className="text-xs text-red-200/90 font-semibold uppercase tracking-wider">
+                Trophy Victories
+              </div>
+              <div className="mt-3 text-[11px] text-slate-400">
+                Last Lifted: 2019 · Seeking To Break Hoodoo
+              </div>
+            </div>
+
+            {/* Draws Card */}
+            <div className="p-6 sm:p-8 rounded-2xl bg-slate-900/90 border-2 border-slate-700 text-center flex flex-col justify-center shadow-xl">
+              <div className="text-xs font-mono font-bold uppercase tracking-wider text-slate-400">
+                Drawn Matches
+              </div>
+              <div className="font-heading font-black text-5xl sm:text-7xl text-[#D4AF37] my-2 tabular-nums">
+                {HISTORICAL_RECORD.winTally.draw}
+              </div>
+              <div className="text-xs text-slate-300 font-semibold uppercase tracking-wider">
+                Total Matches: {HISTORICAL_RECORD.winTally.totalPlayed}
+              </div>
+              <div className="mt-3 text-[11px] text-[#D4AF37] font-mono">
+                Since 1986 Inception
+              </div>
+            </div>
+
+            {/* Wesley Card */}
+            <div className="p-6 sm:p-8 rounded-2xl bg-gradient-to-b from-[#0B3D91]/35 to-[#091220] border-2 border-[#0066FF]/60 text-center relative overflow-hidden shadow-xl">
+              <div className="text-xs font-mono font-bold uppercase tracking-wider text-blue-300">
+                Wesley College
+              </div>
+              <div className="font-heading font-black text-5xl sm:text-7xl text-white my-2 tabular-nums">
+                {HISTORICAL_RECORD.winTally.wesley}
+              </div>
+              <div className="text-xs text-blue-200/90 font-semibold uppercase tracking-wider">
+                Trophy Victories
+              </div>
+              <div className="mt-3 text-[11px] text-[#4FC3F7] font-bold">
+                Current Holders · Record 5th Win in a Row (2026)
+              </div>
+            </div>
+          </div>
+
+          {/* 1986 Historic Photo & Key Facts Split */}
+          <div className="rounded-2xl bg-[#091220] border border-slate-800 p-6 sm:p-8 shadow-2xl">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+              {/* Photo */}
+              <div className="lg:col-span-6 rounded-xl overflow-hidden border border-slate-700 bg-black shadow-xl">
+                <img
+                  src={HISTORICAL_RECORD.historicPhotoUrl}
+                  alt="Historic 1986 Inaugural Match photograph: Sumedha Kuruppu & Ronnie Ibrahim with squads"
+                  className="w-full h-auto object-contain block select-none"
+                  loading="lazy"
+                  referrerPolicy="no-referrer"
+                />
+                <div className="p-3 bg-black/80 text-[11px] text-slate-400 font-mono text-center">
+                  Inaugural 1986 Squads · Captains Sumedha Kuruppu (Wesley) & Ronnie Ibrahim (Kingswood)
+                </div>
+              </div>
+
+              {/* Text chronicle & Junior matches summary */}
+              <div className="lg:col-span-6 space-y-4">
+                <div className="inline-flex items-center gap-1.5 text-xs font-mono font-bold uppercase tracking-wider text-[#D4AF37]">
+                  <Flame className="w-4 h-4 text-[#D4AF37]" />
+                  <span>The Inaugural Legacy</span>
+                </div>
+                <h3 className="font-heading font-black text-2xl sm:text-3xl uppercase text-white tracking-wide">
+                  Donated by Roy De Silva (1986)
+                </h3>
+                <p className="text-slate-300 text-sm leading-relaxed">
+                  In 1986, <strong>Sumedha Kuruppu</strong> of Wesley College and <strong>Ronnie Ibrahim</strong> of Kingswood College led their teams in the inaugural match. The trophy was donated by <strong>Roy De Silva</strong>, distinguished Kingswoodian and former Chairman of the Asian Olympic Committee.
+                </p>
+
+                {/* Junior Trophies List */}
+                <div className="pt-3 border-t border-slate-800">
+                  <div className="text-xs font-bold uppercase tracking-wider text-slate-300 mb-2.5">
+                    Junior & Age-Group Trophies
+                  </div>
+                  <div className="grid grid-cols-2 gap-2 text-xs">
+                    {HISTORICAL_RECORD.juniorMatches.map((jm) => (
+                      <div
+                        key={jm.grade}
+                        className="p-2.5 rounded-lg bg-slate-900/90 border border-slate-800 text-slate-300"
+                      >
+                        <span className="text-[#D4AF37] font-bold block">{jm.grade}</span>
+                        <span className="text-white font-medium">{jm.trophy}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="pt-2">
+                  <Link
+                    to="/about"
+                    className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#D4AF37] hover:underline"
+                  >
+                    <span>Read Full Historical Archive & Legends</span>
+                    <ChevronRight className="w-4 h-4" />
+                  </Link>
+                </div>
               </div>
             </div>
           </div>

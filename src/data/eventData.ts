@@ -40,6 +40,92 @@ export interface HighlightMoment {
   keyDetails: string[];
 }
 
+export interface HistoryRecord {
+  inaugurationYear: number;
+  inauguralCaptains: {
+    wesley: string;
+    kingswood: string;
+  };
+  trophyDonor: {
+    name: string;
+    title: string;
+    description: string;
+  };
+  winTally: {
+    kingswood: number;
+    wesley: number;
+    draw: number;
+    totalPlayed: number;
+  };
+  currentHolders: {
+    school: string;
+    streak: string;
+    year: number;
+    notes: string;
+  };
+  kingswoodLastWon: number;
+  rugbyMilestones: {
+    kingswoodIntro: string;
+    firstInterSchoolMatch: string;
+    wesleyIntro: string;
+  };
+  legends: string[];
+  juniorMatches: {
+    grade: string;
+    trophy: string;
+  }[];
+  historicPhotoUrl: string;
+}
+
+export const HISTORICAL_RECORD: HistoryRecord = {
+  inaugurationYear: 1986,
+  inauguralCaptains: {
+    wesley: 'Sumedha Kuruppu',
+    kingswood: 'Ronnie Ibrahim',
+  },
+  trophyDonor: {
+    name: 'Mr. Roy De Silva',
+    title: 'Distinguished Old Boy of Kingswood',
+    description: 'Former Chairman of the Asian Olympic Committee',
+  },
+  winTally: {
+    kingswood: 23,
+    wesley: 11,
+    draw: 4,
+    totalPlayed: 38,
+  },
+  currentHolders: {
+    school: 'Wesley College',
+    streak: 'Record 5th win in a row',
+    year: 2026,
+    notes: 'Wesley are the holders of the Prestigious Blaze Trophy after setting a record 5th win in a row in 2026.',
+  },
+  kingswoodLastWon: 2019,
+  rugbyMilestones: {
+    kingswoodIntro: 'Kingswood College carries the rare honour as the school which introduced Rugby to Sri Lanka in 1891 by founding forefather Louis Edmund Blaze.',
+    firstInterSchoolMatch: 'In 1906, the first match ever between two schools in Sri Lanka was played between Kingswood College and Trinity College Kandy.',
+    wesleyIntro: 'Wesley College started rugby in 1956 under Eddie Buell.',
+  },
+  legends: [
+    'Nalaka',
+    'Eranda Weerakkody',
+    'Amjad Buksh',
+    'Fazil Marija',
+    'Dev Anand',
+    'Kishan Musafer',
+    'Zulfikar Haleemdeen',
+    'Henry Terence',
+    'Rahul De Silva',
+  ],
+  juniorMatches: [
+    { grade: 'Under 12', trophy: 'P. H. Nonis Trophy' },
+    { grade: 'Under 14', trophy: 'N. J. Madannayake Trophy' },
+    { grade: 'Under 16', trophy: 'Shelton Wirasinha Shield' },
+    { grade: '2nd XV', trophy: 'Kenneth De Lanerolle Trophy' },
+  ],
+  historicPhotoUrl: '/assets/aistudio/photo_20fd3dcf.jpeg',
+};
+
 export const BRAND_CONFIG = {
   name: 'L.E BLAZE TROPHY',
   tagline: 'A Celebration of Rugby, Tradition & School Spirit.',
@@ -117,6 +203,16 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     aspectRatio: 'square',
     featured: true,
     tag: 'Official Event Poster',
+  },
+  {
+    id: 'inaugural-1986-photo',
+    title: 'Inaugural 1986 Blaze Trophy Encounter Squads',
+    category: 'Players',
+    imageUrl: '/assets/aistudio/photo_20fd3dcf.jpeg',
+    caption: 'Historic 1986 inaugural encounter: Sumedha Kuruppu of Wesley College and Ronnie Ibrahim of Kingswood College leading their respective teams at the historic first match.',
+    aspectRatio: 'landscape',
+    featured: true,
+    tag: 'Inaugural 1986 Match',
   },
   {
     id: 'art-01',
