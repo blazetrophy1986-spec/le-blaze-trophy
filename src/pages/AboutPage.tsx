@@ -178,18 +178,71 @@ export const AboutPage: React.FC = () => {
               loading="eager"
               referrerPolicy="no-referrer"
             />
-            <div className="p-4 sm:p-5 bg-gradient-to-t from-[#060D17] to-[#0A1424] border-t border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs">
-              <div className="space-y-1">
-                <span className="font-heading text-sm font-bold uppercase tracking-wider text-[#D4AF37] block">
-                  Original 1986 Inaugural Match Photograph
-                </span>
-                <span className="text-slate-300">
-                  Kingswood College and Wesley College First XV squads photographed together in blazers & kits.
-                </span>
+            <div className="p-5 sm:p-8 bg-gradient-to-t from-[#060D17] to-[#0A1424] border-t border-slate-800 flex flex-col gap-6">
+              <div className="space-y-4 text-sm sm:text-base text-slate-300 leading-relaxed">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3 border-b border-slate-800/80">
+                  <span className="font-heading text-base sm:text-lg font-bold uppercase tracking-wider text-[#D4AF37]">
+                    Original 1986 Inaugural Match Photograph &amp; Chronicle
+                  </span>
+                  <span className="text-xs text-slate-400 font-mono">
+                    Captains: Sumedha Kuruppu &amp; Ronnie Ibrahim
+                  </span>
+                </div>
+
+                <p>
+                  The <strong className="text-white">Blaze Trophy</strong> was inaugurated in <strong className="text-white">1986</strong> with <strong className="text-white">Sumedha Kuruppu</strong> of Wesley College, Colombo and <strong className="text-white">Ronnie Ibrahim</strong> of Kingswood College, Kandy leading the two schools at the inaugural encounter, which is played in honour of the man who introduced Rugby to Ceylon, <strong className="text-white">Louis Edmund Blaze</strong> – the founding forefather of Kingswood College who changed the course of sports in the island nation with the introduction of the oval ball game.
+                </p>
+
+                <p>
+                  The trophy was donated by <strong className="text-white">Roy De Silva</strong>, a distinguished Old Boy of Kingswood and former Chairman of the Asian Olympic Committee.
+                </p>
+
+                <p>
+                  From the iconic playmakers in the likes of <strong className="text-white">Nalaka, Eranda Weerakkody, Amjad Buksh, Fazil Marija</strong>, to <strong className="text-white">Dev Anand</strong> and <strong className="text-white">Kishan Musafer, Zulfikar Haleemdeen, Henry Terence</strong> to <strong className="text-white">Rahul De Silva</strong> and many more, the Blaze Trophy has seen some unforgettable moments and is truly a classic rivalry.
+                </p>
+
+                <p>
+                  Kingswood College carries the rare honour as the school which introduced Rugby to Sri Lanka in <strong className="text-white">1891</strong>. In <strong className="text-white">1906</strong> the first match ever between two schools in Sri Lanka was played between Kingswood College and Trinity College Kandy. Wesley College started rugby in <strong className="text-white">1956</strong> under <strong className="text-white">Eddie Buell</strong>.
+                </p>
+
+                <p>
+                  <strong className="text-white">Wesley</strong> are the holders of the Prestigious Blaze Trophy after setting a record <strong className="text-[#4FC3F7]">5th win in a row in 2026</strong>. <strong className="text-white">Kingswood</strong> last lifted the cup in <strong className="text-white">2019</strong> and are eagerly looking to break the hoodoo.
+                </p>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4 border-t border-slate-800/80">
+                  <div className="p-4 rounded-xl bg-slate-900/70 border border-slate-800 space-y-2">
+                    <h3 className="font-heading text-lg font-bold uppercase tracking-wider text-[#D4AF37]">
+                      Win Tally
+                    </h3>
+                    <ul className="space-y-1 text-sm text-slate-200 tabular-nums">
+                      <li className="flex justify-between">
+                        <span>Kingswood</span>
+                        <span className="font-bold text-white">23</span>
+                      </li>
+                      <li className="flex justify-between">
+                        <span>Wesley</span>
+                        <span className="font-bold text-white">11</span>
+                      </li>
+                      <li className="flex justify-between">
+                        <span>Draw</span>
+                        <span className="font-bold text-[#D4AF37]">4</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div className="p-4 rounded-xl bg-slate-900/70 border border-slate-800 space-y-2">
+                    <h3 className="font-heading text-lg font-bold uppercase tracking-wider text-[#D4AF37]">
+                      Junior Matches
+                    </h3>
+                    <ul className="space-y-1 text-sm text-slate-200">
+                      <li>Under 12: <span className="font-semibold text-white">P. H. Nonis Trophy</span></li>
+                      <li>Under 14: <span className="font-semibold text-white">N.J. Madannayake Trophy</span></li>
+                      <li>Under 16: <span className="font-semibold text-white">Shelton Wirasinha Shield</span></li>
+                      <li>2nd XV: <span className="font-semibold text-white">Kenneth De Lanerolle Trophy</span></li>
+                    </ul>
+                  </div>
+                </div>
               </div>
-              <span className="px-3 py-1 rounded bg-black/60 border border-slate-700 text-slate-400 font-mono text-[11px] self-start sm:self-auto shrink-0">
-                Captains: Sumedha Kuruppu & Ronnie Ibrahim
-              </span>
             </div>
           </div>
         </article>
