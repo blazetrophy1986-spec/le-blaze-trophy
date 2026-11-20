@@ -14,7 +14,7 @@ export const Footer: React.FC = () => {
             <div className="flex items-center gap-4">
               <div className="w-14 h-14 p-1 rounded-xl bg-white shadow-md border border-slate-700 shrink-0">
                 <img
-                  src={SCHOOL_DATA.kingswood.crestUrl}
+                  src="/assets/aistudio/WhatsApp_Image_2026-11-20_at_18.40.41_98966878.jpeg"
                   alt={SCHOOL_DATA.kingswood.crestAlt}
                   className="w-full h-full object-contain"
                   referrerPolicy="no-referrer"

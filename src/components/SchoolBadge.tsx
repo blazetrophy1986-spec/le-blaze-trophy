@@ -16,7 +16,7 @@ export const SchoolBadge: React.FC<SchoolBadgeProps> = ({
   const isKingswood = school === 'kingswood';
 
   const logoSrc = isKingswood
-    ? '/assets/aistudio/Kinesley_logo_9f0698b4.jpeg'
+    ? '/assets/aistudio/WhatsApp_Image_2026-11-20_at_18.40.41_98966878.jpeg'
     : '/assets/aistudio/Wesley_College_8f1dccae.jpeg';
 
   const schoolName = isKingswood ? 'Kingswood College' : 'Wesley College';
