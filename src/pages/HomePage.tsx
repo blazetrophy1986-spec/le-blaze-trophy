@@ -50,8 +50,8 @@ export const HomePage: React.FC = () => {
           <div className="w-full max-w-3xl lg:max-w-4xl mx-auto my-2 sm:my-4">
             <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden bg-[#050B14] border border-[#D4AF37]/35 shadow-2xl shadow-black/90 gold-glow">
               <img
-                src="/assets/aistudio/WhatsApp_Image_2026-11-01_at_03.32.26_ffbebc9a.jpeg"
-                alt="The Official L.E. Blaze Trophy Poster - Wesley College vs Kingswood College - Since 1986"
+                src="/assets/aistudio/WhatsApp_Image_2026-11-19_at_16.00.29_adbe6222.jpeg"
+                alt="L.E. Blaze Trophy Encounter 2027 - Wesley College Colombo vs Kingswood College Kandy"
                 className="w-full h-auto object-contain block mx-auto select-none"
                 style={{ width: '100%', height: 'auto' }}
                 loading="eager"
