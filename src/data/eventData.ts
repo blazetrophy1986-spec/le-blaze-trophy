@@ -72,7 +72,9 @@ export interface HistoryRecord {
   legends: string[];
   juniorMatches: {
     grade: string;
+    shortCode: string;
     trophy: string;
+    isSpecialAward?: boolean;
   }[];
   historicPhotoUrl: string;
 }
@@ -118,10 +120,12 @@ export const HISTORICAL_RECORD: HistoryRecord = {
     'Rahul De Silva',
   ],
   juniorMatches: [
-    { grade: 'Under 12', trophy: 'P. H. Nonis Trophy' },
-    { grade: 'Under 14', trophy: 'N. J. Madannayake Trophy' },
-    { grade: 'Under 16', trophy: 'Shelton Wirasinha Shield' },
-    { grade: '2nd XV', trophy: 'Kenneth De Lanerolle Trophy' },
+    { grade: 'Under-10', shortCode: 'U10', trophy: 'Kingswood vs Wesley Challenge Trophy' },
+    { grade: 'Under-12', shortCode: 'U12', trophy: 'P. H. Nonis Trophy' },
+    { grade: 'Under-14', shortCode: 'U14', trophy: 'N. J. Mudannayake Trophy' },
+    { grade: 'Under-16', shortCode: 'U16', trophy: 'Shelton Wirasinha Shield' },
+    { grade: 'Under-18', shortCode: 'U18', trophy: 'Kenneth De Lanerolle Trophy' },
+    { grade: 'Special Award', shortCode: 'AWARD', trophy: 'Best Player', isSpecialAward: true },
   ],
   historicPhotoUrl: '/assets/aistudio/photo_20fd3dcf.jpeg',
 };

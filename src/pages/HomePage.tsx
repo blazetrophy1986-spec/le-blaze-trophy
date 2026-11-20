@@ -370,16 +370,20 @@ export const HomePage: React.FC = () => {
                   In 1986, <strong>Sumedha Kuruppu</strong> of Wesley College and <strong>Ronnie Ibrahim</strong> of Kingswood College led their teams in the inaugural match. The trophy was donated by <strong>Roy De Silva</strong>, distinguished Kingswoodian and former Chairman of the Asian Olympic Committee.
                 </p>
 
-                {/* Junior Trophies List */}
+                {/* Junior Matches List */}
                 <div className="pt-3 border-t border-slate-800">
                   <div className="text-xs font-bold uppercase tracking-wider text-slate-300 mb-2.5">
-                    Junior & Age-Group Trophies
+                    Junior Matches
                   </div>
-                  <div className="grid grid-cols-2 gap-2 text-xs">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs">
                     {HISTORICAL_RECORD.juniorMatches.map((jm) => (
                       <div
                         key={jm.grade}
-                        className="p-2.5 rounded-lg bg-slate-900/90 border border-slate-800 text-slate-300"
+                        className={`p-2.5 rounded-lg border text-slate-300 ${
+                          jm.isSpecialAward
+                            ? 'bg-[#D4AF37]/10 border-[#D4AF37]/40'
+                            : 'bg-slate-900/90 border-slate-800'
+                        }`}
                       >
                         <span className="text-[#D4AF37] font-bold block">{jm.grade}</span>
                         <span className="text-white font-medium">{jm.trophy}</span>

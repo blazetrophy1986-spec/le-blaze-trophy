@@ -234,11 +234,16 @@ export const AboutPage: React.FC = () => {
                     <h3 className="font-heading text-lg font-bold uppercase tracking-wider text-[#D4AF37]">
                       Junior Matches
                     </h3>
-                    <ul className="space-y-1 text-sm text-slate-200">
-                      <li>Under 12: <span className="font-semibold text-white">P. H. Nonis Trophy</span></li>
-                      <li>Under 14: <span className="font-semibold text-white">N.J. Madannayake Trophy</span></li>
-                      <li>Under 16: <span className="font-semibold text-white">Shelton Wirasinha Shield</span></li>
-                      <li>2nd XV: <span className="font-semibold text-white">Kenneth De Lanerolle Trophy</span></li>
+                    <ul className="space-y-1.5 text-sm text-slate-200">
+                      <li>Under-10: <span className="font-semibold text-white">Kingswood vs Wesley Challenge Trophy</span></li>
+                      <li>Under-12: <span className="font-semibold text-white">P. H. Nonis Trophy</span></li>
+                      <li>Under-14: <span className="font-semibold text-white">N. J. Mudannayake Trophy</span></li>
+                      <li>Under-16: <span className="font-semibold text-white">Shelton Wirasinha Shield</span></li>
+                      <li>Under-18: <span className="font-semibold text-white">Kenneth De Lanerolle Trophy</span></li>
+                      <li className="pt-1.5 mt-1.5 border-t border-slate-800/80">
+                        <span className="text-[#D4AF37] font-semibold">Special Award:</span>{' '}
+                        <span className="font-semibold text-white">Best Player</span>
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -366,7 +371,7 @@ export const AboutPage: React.FC = () => {
           </div>
           <div>
             <h2 className="font-heading font-black text-3xl sm:text-4xl uppercase text-white tracking-tight">
-              Junior & Age-Group Matches
+              Junior Matches
             </h2>
             <p className="text-slate-300 text-sm mt-1">
               The rivalry spans every tier of schoolboy rugby, with contested trophies honouring revered masters and icons of both institutions:
@@ -377,14 +382,18 @@ export const AboutPage: React.FC = () => {
             {HISTORICAL_RECORD.juniorMatches.map((j) => (
               <div
                 key={j.grade}
-                className="p-5 rounded-xl bg-slate-900/90 border border-slate-800 flex items-start gap-4 hover:border-slate-700 transition-colors"
+                className={`p-5 rounded-xl border flex items-start gap-4 transition-colors ${
+                  j.isSpecialAward
+                    ? 'bg-[#D4AF37]/10 border-[#D4AF37]/40 hover:border-[#D4AF37]/70'
+                    : 'bg-slate-900/90 border-slate-800 hover:border-slate-700'
+                }`}
               >
                 <div className="w-10 h-10 rounded-lg bg-[#D4AF37]/15 border border-[#D4AF37]/40 flex items-center justify-center text-[#D4AF37] shrink-0 font-heading font-bold text-sm">
-                  {j.grade.replace('Under ', 'U')}
+                  {j.isSpecialAward ? <Award className="w-5 h-5" /> : j.shortCode}
                 </div>
                 <div>
                   <div className="text-[11px] font-mono uppercase tracking-wider text-slate-400">
-                    {j.grade} Match
+                    {j.isSpecialAward ? j.grade : `${j.grade} Match`}
                   </div>
                   <div className="font-heading font-bold text-lg uppercase text-white">
                     {j.trophy}
