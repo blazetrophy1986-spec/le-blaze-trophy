@@ -151,7 +151,7 @@ export const HomePage: React.FC = () => {
                   <div className="flex items-center gap-4">
                     <div className="w-16 h-16 p-1.5 rounded-xl bg-white shadow-lg border border-slate-700">
                       <img
-                        src={SCHOOL_DATA.kingswood.crestUrl}
+                        src="/assets/aistudio/WhatsApp_Image_2026-11-20_at_18.40.41_98966878.jpeg"
                         alt={SCHOOL_DATA.kingswood.crestAlt}
                         className="w-full h-full object-contain"
                         referrerPolicy="no-referrer"
@@ -426,40 +426,10 @@ export const HomePage: React.FC = () => {
             </Link>
           </div>
 
-          {/* Marquee Bento-Grid using uploaded official artworks & ceremony photography */}
+          {/* Marquee Feature using uploaded official photography */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {/* Big Feature: Handcrafted Trophy Blueprint & Drone Concept */}
-            <div className="md:col-span-2 relative rounded-2xl overflow-hidden border border-slate-800 bg-slate-900 shadow-2xl group min-h-[380px]">
-              <img
-                src="/assets/aistudio/WhatsApp_Image_2026-10-30_at_12.40.42_895cac06.jpeg"
-                alt="L.E Blaze Trophy Handcrafted Blueprint and Color Guide"
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                referrerPolicy="no-referrer"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end p-6 sm:p-8">
-                <span className="text-xs font-bold uppercase tracking-widest text-[#D4AF37] mb-1">
-                  OFFICIAL ARTWORK & SPECIFICATION
-                </span>
-                <h3 className="font-heading text-2xl sm:text-3xl font-extrabold uppercase text-white tracking-wide">
-                  The Handcrafted L.E Blaze Trophy Design
-                </h3>
-                <p className="text-xs sm:text-sm text-slate-300 mt-2 max-w-xl">
-                  Original hand-drawn design delineating the gold bowl, twin Dark Blue and Light Blue handles, and the dual banners uniting Kingswood maroon & royal blue with Wesley double blue.
-                </p>
-                <div className="mt-4 flex items-center gap-3">
-                  <Link
-                    to="/gallery"
-                    className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-[#D4AF37] text-slate-950 font-bold text-xs uppercase tracking-wider hover:bg-[#E5C158] transition-colors"
-                  >
-                    <span>View in Lightbox</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </Link>
-                </div>
-              </div>
-            </div>
-
             {/* Side Card 1: Wesley College Colors */}
-            <div className="relative rounded-2xl overflow-hidden border border-slate-800 bg-slate-900 shadow-2xl group min-h-[380px] flex flex-col justify-end p-6">
+            <div className="md:col-span-3 relative rounded-2xl overflow-hidden border border-slate-800 bg-slate-900 shadow-2xl group min-h-[380px] flex flex-col justify-end p-6 sm:p-8">
               <img
                 src="/assets/aistudio/Wesley_College_colors_ee5793ca.jpeg"
                 alt="Wesley College Colombo Double Blue Banners"
