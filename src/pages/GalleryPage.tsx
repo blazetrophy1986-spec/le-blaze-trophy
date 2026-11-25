@@ -101,7 +101,9 @@ export const GalleryPage: React.FC = () => {
                   src={photo.imageUrl}
                   alt={photo.title}
                   loading="lazy"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  className={`w-full h-full transition-transform duration-700 group-hover:scale-105 ${
+                    photo.fit === 'contain' ? 'object-contain p-1' : 'object-cover'
+                  }`}
                   referrerPolicy="no-referrer"
                 />
                 
